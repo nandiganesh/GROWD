@@ -4,6 +4,8 @@ import { PlaceCard } from '@/components/ui/card-22';
 import atmasakshifoundationImg from '@/assets/atmasakshifoundation.png';
 import kalaravaImg from '@/assets/kalarava.png';
 import revoxaImg from '@/assets/revoxa.png';
+import hotcoffeeImg from '@/assets/hotcoffee.png';
+import obsidianCoImg from '@/assets/Obsidian&Co.png';
 
 const places = [
   {
@@ -56,6 +58,32 @@ const places = [
       'Supercharge productivity with AI-powered automation and integrations built for the next generation of teams. Revoxa helps you launch your workflow into orbit.',
     pricePerNight: 1250000,
     website: 'https://revoxa2-0.vercel.app/',
+  },
+  {
+    images: [hotcoffeeImg],
+    tags: ['Demo'],
+    rating: 4.5,
+    title: 'Hot Coffee',
+    dateRange: '2026',
+    hostType: 'Demo',
+    isTopRated: false,
+    description: 'A modern coffee shop website demo. Discover the best brews and cozy spaces.',
+    pricePerNight: 0,
+    website: 'https://hotcoffee-five.vercel.app/',
+    showDemoLabel: true,
+  },
+  {
+    images: [obsidianCoImg],
+    tags: ['Demo'],
+    rating: 4.7,
+    title: 'Obsidian & Co',
+    dateRange: '2026',
+    hostType: 'Demo',
+    isTopRated: false,
+    description: 'A stylish demo site for Obsidian & Co. Explore the brand and its digital presence.',
+    pricePerNight: 0,
+    website: 'https://obsidian-co.vercel.app/',
+    showDemoLabel: true,
   },
 ];
 

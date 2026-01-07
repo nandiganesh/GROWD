@@ -76,10 +76,12 @@ const ContactSection = () => {
                 Email
               </p>
               <a
-                href="mailto:hello@growd.agency"
+                href="https://mail.google.com/mail/?view=cm&to=contactgrowd@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-2xl font-display font-bold text-foreground transition-colors hover:text-accent md:text-3xl"
               >
-                hello@growd.agency
+                ContactGword@gmail.com
               </a>
             </div>
 
@@ -88,7 +90,7 @@ const ContactSection = () => {
                 Location
               </p>
               <p className="text-lg text-foreground md:text-xl">
-                New York / London / Tokyo
+                Belgaum / Karnataka / India
               </p>
             </div>
 

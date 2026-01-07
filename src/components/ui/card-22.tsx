@@ -18,6 +18,7 @@ interface PlaceCardProps {
   pricePerNight: number;
   website?: string;
   className?: string;
+  showDemoLabel?: boolean;
 }
 
 export const PlaceCard = ({
@@ -32,6 +33,7 @@ export const PlaceCard = ({
   pricePerNight,
   website,
   className,
+  showDemoLabel,
 }: PlaceCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -145,7 +147,10 @@ export const PlaceCard = ({
             </Badge>
           ))}
         </div>
-        <div className="absolute right-3 top-3">
+        <div className="absolute right-3 top-3 flex flex-col items-end gap-2">
+          {showDemoLabel && (
+            <span className="inline-block rounded bg-blue-600 px-2 py-0.5 text-xs font-bold text-white shadow">demo</span>
+          )}
           <Badge variant="secondary" className="flex items-center gap-1 bg-background/70 backdrop-blur-sm">
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" /> {rating.toFixed(1)}
           </Badge>
