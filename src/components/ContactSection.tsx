@@ -110,6 +110,9 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
+      <div className="mt-8 text-center text-muted-foreground text-sm">
+        <p>Site by Ganesh Nandi | Contact: <a href="tel:8884077319" className="underline hover:text-foreground">8884077319</a></p>
+      </div>
     </section>
   );
 };

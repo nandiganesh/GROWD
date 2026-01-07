@@ -11,9 +11,10 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} GROWD Agency. All rights reserved.
-          </p>
+          <div className="flex flex-col text-sm text-muted-foreground">
+            <p>© {currentYear} GROWD Agency. All rights reserved.</p>
+            <p>Site by Ganesh Nandi | Contact: <a href="tel:8884077319" className="underline hover:text-foreground">8884077319</a></p>
+          </div>
 
           {/* Back to top */}
           <button
