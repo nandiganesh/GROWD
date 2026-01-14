@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -142,8 +143,8 @@ const ServicesSection = () => {
 
         {/* Contact Link */}
         <div className="mt-16 flex justify-center">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="group inline-flex items-center gap-3 text-lg uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
           >
             <span>Start a Project</span>
@@ -160,7 +161,7 @@ const ServicesSection = () => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

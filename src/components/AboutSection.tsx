@@ -115,7 +115,7 @@ const AboutSection = () => {
         </div>
 
         {/* Stats */}
-        <div
+        {/* <div
           ref={statsRef}
           className="mt-16 grid grid-cols-2 gap-8 border-t border-border pt-12 sm:mt-20 sm:pt-16 md:grid-cols-4"
         >
@@ -129,7 +129,7 @@ const AboutSection = () => {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -219,12 +220,12 @@ const ServicesPageContent = () => {
           <p className="mt-3 text-base text-background/80">
             Get in touch and let’s discuss how we can bring your next initiative to life.
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-background px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-foreground transition hover:bg-background/90"
           >
             Start Your Project
-          </a>
+          </Link>
         </div>
       </div>
     </section>

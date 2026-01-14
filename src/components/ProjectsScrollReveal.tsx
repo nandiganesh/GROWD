@@ -1,49 +1,62 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import revoxaMobileImg from '@/assets/revoxa_mobile.png.jpeg';
+import atmasakshifoundationImg from '@/assets/atmasakshifoundation.png';
+import kalaravaImg from '@/assets/kalarava.png';
+import hotcoffeeImg from '@/assets/hotcoffee.png';
+
 const works = [
   {
     number: '01',
-    title: 'Luminary',
-    category: 'Brand Identity',
+    title: 'Revoxa - Launch Your Workflow Into Orbit',
+    category: 'AI / Automation',
     description:
-      'Complete brand overhaul for a fintech startup, from strategy to visual identity and digital presence.',
+      'Supercharge productivity with AI-powered automation and integrations built for the next generation of teams. Revoxa helps you launch your workflow into orbit.',
     color: 'bg-accent',
     textColor: 'text-accent-foreground',
     size: 'large',
+    image: revoxaMobileImg,
+    website: 'https://revoxa2-0.vercel.app/',
   },
   {
     number: '02',
-    title: 'Nexus Labs',
-    category: 'Digital Experience',
+    title: 'KALARAVA - PU 2nd Year Fest',
+    category: 'Event / Education',
     description:
-      'From concept to launch, we crafted an immersive web experience that drives engagement and conversions.',
+      'KALARAVA is an annual PU 2nd Year Science & Commerce Fest, celebrating student achievement and talent through vibrant events and competitions.',
     color: 'bg-secondary',
     textColor: 'text-secondary-foreground',
     size: 'medium',
+    image: kalaravaImg,
+    website: 'https://www.kalarava.xyz/',
   },
   {
     number: '03',
-    title: 'Verdant',
-    category: 'Web Design',
+    title: 'Atmasakshi Foundation',
+    category: 'Nonprofit / Wellness',
     description:
-      'Elevate your brand with stunning visuals and cohesive design that reflects your unique identity.',
+      'Transforming lives through meditation, education, and empowerment. Atmasakshi Foundation is dedicated to uplifting communities and fostering holistic well-being.',
     color: 'bg-foreground',
     textColor: 'text-background',
     size: 'small',
+    image: atmasakshifoundationImg,
+    website: 'https://www.atmasakshifoundation.org/',
   },
   {
     number: '04',
-    title: 'Prism Co',
-    category: 'Campaign',
-    description:
-      'Strategic campaign design that resonates with audiences and drives measurable results.',
+    title: 'Hot Coffee',
+    category: 'Demo / Coffee Shop',
+    description: 'A modern coffee shop website demo. Discover the best brews and cozy spaces.',
     color: 'bg-secondary',
     textColor: 'text-secondary-foreground',
     size: 'small',
+    image: hotcoffeeImg,
+    website: 'https://hotcoffee-five.vercel.app/',
   },
 ];
 
@@ -121,27 +134,34 @@ const ProjectsScrollReveal = () => {
           className="grid gap-6 md:grid-cols-3 md:auto-rows-[320px]"
         >
           {/* Large Tile */}
-          <a
-            href="#"
+          <Link
+            to="/work"
             className="bento-tile group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-3xl bg-accent p-8 transition-transform duration-500 hover:scale-[0.98] md:row-span-2 md:p-10"
           >
-            <span className="absolute left-8 top-8 font-display text-6xl font-bold text-accent-foreground/20 md:left-10 md:top-10 md:text-8xl">
+            <img
+              src={works[0].image}
+              alt={works[0].title}
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden />
+            <span className="absolute left-8 top-8 z-10 font-display text-6xl font-bold text-white/30 md:left-10 md:top-10 md:text-8xl">
               {works[0].number}
             </span>
             <div className="relative z-10">
-              <h3 className="mb-2 font-display text-3xl font-bold text-accent-foreground md:text-4xl">
+              <h3 className="mb-2 font-display text-3xl font-bold text-white md:text-4xl">
                 {works[0].title}
               </h3>
-              <p className="mb-4 text-sm uppercase tracking-widest text-accent-foreground/70">
+              <p className="mb-4 text-sm uppercase tracking-widest text-white/70">
                 {works[0].category}
               </p>
-              <p className="max-w-sm text-sm leading-relaxed text-accent-foreground/80">
+              <p className="max-w-sm text-sm leading-relaxed text-white/80">
                 {works[0].description}
               </p>
             </div>
             <div className="absolute bottom-8 right-8 opacity-0 transition-all duration-300 group-hover:opacity-100 md:bottom-10 md:right-10">
               <svg
-                className="h-8 w-8 text-accent-foreground"
+                className="h-8 w-8 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -154,30 +174,37 @@ const ProjectsScrollReveal = () => {
                 />
               </svg>
             </div>
-          </a>
+          </Link>
 
           {/* Medium Tile */}
-          <a
-            href="#"
+          <Link
+            to="/work"
             className="bento-tile group relative flex min-h-[280px] flex-col justify-end overflow-hidden rounded-3xl bg-secondary p-8 transition-transform duration-500 hover:scale-[0.98] md:col-span-2 md:p-10"
           >
-            <span className="absolute left-8 top-8 font-display text-5xl font-bold text-secondary-foreground/20 md:left-10 md:top-10 md:text-6xl">
+            <img
+              src={works[1].image}
+              alt={works[1].title}
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden />
+            <span className="absolute left-8 top-8 z-10 font-display text-5xl font-bold text-white/30 md:left-10 md:top-10 md:text-6xl">
               {works[1].number}
             </span>
             <div className="relative z-10">
-              <h3 className="mb-2 font-display text-2xl font-bold text-secondary-foreground md:text-3xl">
+              <h3 className="mb-2 font-display text-2xl font-bold text-white md:text-3xl">
                 {works[1].title}
               </h3>
-              <p className="mb-3 text-sm uppercase tracking-widest text-secondary-foreground/70">
+              <p className="mb-3 text-sm uppercase tracking-widest text-white/70">
                 {works[1].category}
               </p>
-              <p className="max-w-md text-sm leading-relaxed text-secondary-foreground/80">
+              <p className="max-w-md text-sm leading-relaxed text-white/80">
                 {works[1].description}
               </p>
             </div>
             <div className="absolute bottom-8 right-8 opacity-0 transition-all duration-300 group-hover:opacity-100 md:bottom-10 md:right-10">
               <svg
-                className="h-6 w-6 text-secondary-foreground"
+                className="h-6 w-6 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -190,27 +217,34 @@ const ProjectsScrollReveal = () => {
                 />
               </svg>
             </div>
-          </a>
+          </Link>
 
           {/* Small Tiles */}
-          <a
-            href="#"
+          <Link
+            to="/work"
             className="bento-tile group relative flex min-h-[240px] flex-col justify-end overflow-hidden rounded-3xl bg-foreground p-8 transition-transform duration-500 hover:scale-[0.98] md:p-10"
           >
-            <span className="absolute left-8 top-6 font-display text-4xl font-bold text-background/20 md:left-10 md:top-8 md:text-5xl">
+            <img
+              src={works[2].image}
+              alt={works[2].title}
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden />
+            <span className="absolute left-8 top-6 z-10 font-display text-4xl font-bold text-white/30 md:left-10 md:top-8 md:text-5xl">
               {works[2].number}
             </span>
             <div className="relative z-10">
-              <h3 className="mb-2 font-display text-xl font-bold text-background md:text-2xl">
+              <h3 className="mb-2 font-display text-xl font-bold text-white md:text-2xl">
                 {works[2].title}
               </h3>
-              <p className="text-xs uppercase tracking-widest text-background/70">
+              <p className="text-xs uppercase tracking-widest text-white/70">
                 {works[2].category}
               </p>
             </div>
             <div className="absolute bottom-6 right-6 opacity-0 transition-all duration-300 group-hover:opacity-100 md:bottom-8 md:right-8">
               <svg
-                className="h-5 w-5 text-background"
+                className="h-5 w-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -223,26 +257,33 @@ const ProjectsScrollReveal = () => {
                 />
               </svg>
             </div>
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            to="/work"
             className="bento-tile group relative flex min-h-[240px] flex-col justify-end overflow-hidden rounded-3xl bg-secondary p-8 transition-transform duration-500 hover:scale-[0.98] md:p-10"
           >
-            <span className="absolute left-8 top-6 font-display text-4xl font-bold text-secondary-foreground/20 md:left-10 md:top-8 md:text-5xl">
+            <img
+              src={works[3].image}
+              alt={works[3].title}
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" aria-hidden />
+            <span className="absolute left-8 top-6 z-10 font-display text-4xl font-bold text-white/30 md:left-10 md:top-8 md:text-5xl">
               {works[3].number}
             </span>
             <div className="relative z-10">
-              <h3 className="mb-2 font-display text-xl font-bold text-secondary-foreground md:text-2xl">
+              <h3 className="mb-2 font-display text-xl font-bold text-white md:text-2xl">
                 {works[3].title}
               </h3>
-              <p className="text-xs uppercase tracking-widest text-secondary-foreground/70">
+              <p className="text-xs uppercase tracking-widest text-white/70">
                 {works[3].category}
               </p>
             </div>
             <div className="absolute bottom-6 right-6 opacity-0 transition-all duration-300 group-hover:opacity-100 md:bottom-8 md:right-8">
               <svg
-                className="h-5 w-5 text-secondary-foreground"
+                className="h-5 w-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -255,13 +296,13 @@ const ProjectsScrollReveal = () => {
                 />
               </svg>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* View All Link */}
         <div className="mt-10 flex justify-center md:mt-12">
-          <a
-            href="#"
+          <Link
+            to="/work"
             className="group inline-flex items-center gap-3 text-lg uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
           >
             <span>View All Work</span>
@@ -278,7 +319,7 @@ const ProjectsScrollReveal = () => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

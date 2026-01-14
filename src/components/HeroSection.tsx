@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import heroVideo from '@/assets/herosection_video.mp4';
@@ -124,8 +125,8 @@ const HeroSection = () => {
 
           {/* CTA */}
           <div ref={ctaRef} className="flex flex-wrap justify-center gap-3 md:justify-start">
-            <a
-              href="#work"
+            <Link
+              to="/work"
               className="group inline-flex items-center gap-3 bg-foreground px-6 py-3 text-xs uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-accent"
             >
               <span>Explore Work</span>
@@ -142,13 +143,13 @@ const HeroSection = () => {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-3 border border-border px-6 py-3 text-xs uppercase tracking-[0.25em] text-foreground transition-all hover:bg-secondary"
             >
               <span>Get in Touch</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
