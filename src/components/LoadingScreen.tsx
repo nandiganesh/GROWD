@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import logo from '@/assets/favicon_image.png';
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -105,16 +106,21 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
         {/* Center Image Container */}
         <div
           ref={centerImageRef}
-          className="relative h-24 w-24 overflow-hidden bg-secondary md:h-32 md:w-32"
+          className="relative h-28 w-28 overflow-hidden bg-secondary md:h-40 md:w-40"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent" />
+          {/* <img
+            src={logo}
+            alt="GROWD emblem"
+            className="relative z-10 h-full w-full object-cover"
+          /> */}
         </div>
 
         <div
           ref={rightWordRef}
           className="font-display text-6xl font-bold tracking-tighter text-foreground md:text-8xl lg:text-9xl"
         >
-          WD
+        WD
         </div>
       </div>
 

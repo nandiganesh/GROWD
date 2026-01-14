@@ -27,7 +27,7 @@ const PageLayout = ({ children, showLoading = false }: PageLayoutProps) => {
       <header className="fixed left-4 top-4 z-40 sm:left-6 sm:top-6">
         <Link
           to="/"
-          className="font-display text-lg font-bold tracking-tighter text-foreground transition-colors hover:text-accent sm:text-xl"
+          className="hidden font-display text-lg font-bold tracking-tighter text-foreground transition-colors hover:text-accent sm:inline-block sm:text-xl"
         >
           GROWD
         </Link>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
-import logo from '@/assets/GROWD-LOGO.png';
+import logo from '@/assets/favicon_image.png';
 
 const navLinks = [
   { label: 'Home', to: '/' },
